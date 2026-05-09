@@ -1,13 +1,13 @@
 # registrum-node
 
-Node.js starter kit for the [Registrum API](https://registrum.co.uk) — structured UK company data built on Companies House.
+Node.js starter kit for the [Registrum API](https://registrum.co.uk) -- structured UK company data built on Companies House.
 
 ## Quick start
 
-No dependencies required — uses the built-in `fetch` (Node 18+).
+No dependencies required -- uses the built-in `fetch` (Node 18+).
 
 ```js
-const API_KEY = "rg_live_YOUR_KEY_HERE";
+const API_KEY = "reg_live_YOUR_KEY_HERE";
 const BASE_URL = "https://api.registrum.co.uk/v1";
 
 const res = await fetch(
@@ -30,16 +30,21 @@ Works with Node 18+, Deno, and Bun with no changes.
 
 Free tier: 50 calls/month, no credit card required.
 
-→ [registrum.co.uk](https://registrum.co.uk/#get-key)
+Not ready for a key? Browse 10 live companies/day at [registrum.co.uk](https://registrum.co.uk) -- no sign-up needed.
+
+-> [registrum.co.uk/#get-key](https://registrum.co.uk/#get-key)
 
 ## What you get
 
 The Registrum API enriches raw Companies House data with:
 
-- **Structured financials** — turnover, net assets, employees in clean GBP values
-- **Director networks** — 2-degree board traversal to find connected entities
-- **Intelligent caching** — 24h company data, 7-day financials, resilient during CH outages
-- **Fuzzy search** — company name → enriched profile in one call
+- **Structured financials** -- turnover, net assets, employees, YoY comparisons in clean GBP values
+- **Director networks** -- 2-degree board traversal to find connected entities
+- **PSC / beneficial ownership** -- nature-of-control breakdown, cessation dates
+- **ECCTA compliance flags** -- identity verification status per director
+- **Batch enrichment** -- enrich multiple companies in one request
+- **Intelligent caching** -- 24h company data, 7-day financials, resilient during CH outages
+- **Fuzzy search** -- company name to enriched profile in one call
 
 ## API reference
 
